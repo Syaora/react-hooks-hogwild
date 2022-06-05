@@ -11,7 +11,7 @@ function Hog({ hog }){
   return (
     <div className="card">
       <div className="image">
-        <img src={hog.image} />
+        <img src={hog.image} style={{height: 250, "background-size": "contain"}}/>
       </div>
       <div className="content">
         <a className="header">{hog.name}</a>
