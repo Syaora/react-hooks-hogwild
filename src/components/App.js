@@ -8,8 +8,9 @@ import hogs from "../porkers_data";
 function App() {
 	const [showGreased, setShowGreased] = useState(false)
 	const [sortBy, setSortBy] = useState("name")
+	const copyHogs = [...hogs]
 
-	const displayHogs = hogs.filter((hog) => showGreased ? hog.greased : true)
+	const displayHogs = copyHogs.filter((hog) => showGreased ? hog.greased : true)
 		.sort((hog1, hog2) => {
 			if (sortBy === "name"){
 				return hog1.name.localeCompare(hog2.name)
